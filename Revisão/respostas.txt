@@ -1,0 +1,38 @@
+13 – O que é um método em um código de um sistema de informação?
+    Código é um conjunto de instruções que é transformada em uma linguagem legivel para o computador.
+        
+14 – Por que é aconselhável dividir sistemas em métodos separados uns dos outros?
+    Existem diversos motivos para a divisão de sistemas em metodos separados, como 
+        a possibilidade de reutilizar um mesmo código em diferentes lugares e a 
+        facilitade em fazer testes e manutenções com o codigo isolado.
+
+15 – Defina o que é um parâmetro utilizado em um método Java. Depois de definir, explique por que é importante
+termos parâmetros em métodos.
+    Parametro em java é uma variavel com tipo definido utilizada dentro do método, mas passada por fora do metodo.
+        Ela é importante por permitir passar diferentes valores com base no tipo definido, permitindo executar as ações
+        dos metodos com diferentes valores.
+
+16 – O que acontece com um dado passado por parâmetro para um método após a execução deste método?
+    ???????
+
+17 – Para cada situação abaixo, cite estruturas de dados que você utilizaria em sistemas de informação que precisam
+destes dados para resolver o problema. Observe o exemplo para dar suas respostas:
+
+EXEMPLO: Um praticante realiza uma série de exercícios em sua academia a cada dia da semana.
+RESP: Cada entidade praticante pode ter um vetor ou lista estática com os dias da semana (que é um dado conhecido e
+imutável). Cada dia da semana conterá uma fila de exercícios a serem feitos, assumindo que a ordem deles é importante.
+
+b) Uma oficina mecânica realiza diversos serviços em automóveis. Cada automóvel pode ter recebido muitos serviços
+ao longo de sua existência. Um automóvel está sempre associado a um proprietário, que pode ser pessoa física ou
+jurídica (empresa).
+    Utilizaria uma lista ou uma tabela hash para armazenar objetos cliente e cada cliente teria um lista com objetos automoveis.
+
+c) Um candidato possui uma série de habilidades para se candidatar a vagas de emprego. Cada vaga tem suas
+habilidades específicas exigidas e deve possuir um conjunto de candidatos hábeis, destacando aquele que for mais
+adequado para a vaga no momento.
+    Utilizaria um objeto vaga com as habilidades exigidas armazenads nele e uma fila de candidatos que se qualificam nesta vaga.
+    Cada candidato seria um objeto com suas habilidades armazenadas em um vetor. 
+
+d) Um posto de saúde atende a milhares de pacientes. O posto tem um calendário anual de vacinação e cada paciente
+possui um prontuário com as vacinas tomadas, incluindo seu nome, lote e data de aplicação.
+    Utilizaria uma tabela hash para armazenar objetos paciente com base no nome. Cada paciente armazenaria suas informações.
