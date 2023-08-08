@@ -8,6 +8,10 @@ public class aplicados_atv6 {
             primeiroPremio = sc.nextLine();
         System.out.println("Resultado do segundo premio: ");
             segundoPremio = sc.nextLine();
+        //editado pelo telefone e nao testado
+        primeiroPremio = primeiroPremio.replace(".", "");
+        segundoPremio = segundoPremio.replace(".", "");
+        //fim do edit
         sc.close();
         
         System.out.println(segundoPremio.substring(0, 3)+primeiroPremio.substring(2, 5));
