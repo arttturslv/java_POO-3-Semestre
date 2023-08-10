@@ -9,9 +9,7 @@ public class aplicados_atv9 {
         System.out.println("Digite o mês: (sem o zero na frente)");
             mes = sc.nextInt();
 
-        if (verificaData(dia, mes)) {
             diaDaSemana(contarDias(dia, mes));
-        }
         sc.close();
     }
 
@@ -34,13 +32,6 @@ public class aplicados_atv9 {
         } else {
             return 31;
         }
-    }
-
-    public static boolean verificaData(int dia, int mes) {
-        if (dia > 31 || dia < 1 || mes > 12 || mes < 1) {
-            return false;
-        }
-        return true;
     }
 
     public static void diaDaSemana(int qntDias) {
