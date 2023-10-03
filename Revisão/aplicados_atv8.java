@@ -21,43 +21,46 @@ public class aplicados_atv8 {
     }
 
 
-    public static boolean verificaData(int day, int month, int year) {
-        if(day<1) {
+    public static boolean verificaData(int dia, int mes, int ano) {
+        if(dia<1) {
             System.out.println("O dia é invalido (menor que 0)");
             return false;
         }
-        if(month>12 || month<0) {
+        if(mes>12 || mes<0) {
             System.out.println("O mes é invalido. (Maior que 12 ou menor que 1))");
             return false;
         }    
         
-        if(month/10==0 & month%10==9) { //java nao aceita 09 como inteiro
-            month = 9;
+        if(mes/10==0 & mes%10==9) { //java nao aceita 09 como inteiro
+            mes = 9;
         }
 
-        return verifyMes(day, month, year);
+        return verificaMes(dia, mes, ano);
     }
 
-    public static boolean verifyMes(int day, int month, int year) {
-        if(month==04 || month==06 || month==9 || month==12) { //verifica meses com 31
-            if(day>31) {
+    public static boolean verificaMes(int dia, int mes, int ano) {
+        if(mes==04 || mes==06 || mes==9 || mes==12) { //verifica meses com 31
+            if(dia>31) {
                 return false;
             }
-        } else if (month==2) { //verifica fevereiro
-            if(verificaBissexto(year)) {
-                if(day>29)
+        } else if (mes==2) { //verifica fevereiro
+            if(verificaBissexto(ano)) {
+                if(dia>29)
+                return false;
+            } else {
+                if(dia>28)
                 return false;
             }
         } else { //verifica meses com 30
-            if(day>30) {
+            if(dia>30) {
                 return false;
             }
         }
         return true;
     }
 
-    public static boolean verificaBissexto(int year) {
-        if (year % 4 != 0 & year % 400 != 0) {
+    public static boolean verificaBissexto(int ano) {
+        if (ano % 4 != 0 & ano % 400 != 0) {
             return false;
         }
         return true;

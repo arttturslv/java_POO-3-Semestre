@@ -13,7 +13,7 @@ termos parâmetros em métodos.
         dos metodos com diferentes valores.
 
 16 – O que acontece com um dado passado por parâmetro para um método após a execução deste método?
-    ???????
+    Nada, os dados passados por parametro são apenas utilizados pela função.
 
 17 – Para cada situação abaixo, cite estruturas de dados que você utilizaria em sistemas de informação que precisam
 destes dados para resolver o problema. Observe o exemplo para dar suas respostas:

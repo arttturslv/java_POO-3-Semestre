@@ -9,7 +9,7 @@ public class aplicados_atv9 {
         System.out.println("Digite o mês: (sem o zero na frente)");
             mes = sc.nextInt();
 
-            diaDaSemana(contarDias(dia, mes));
+            DescobreDiaDaSemana(contarDias(dia, mes));
         sc.close();
     }
 
@@ -34,7 +34,7 @@ public class aplicados_atv9 {
         }
     }
 
-    public static void diaDaSemana(int qntDias) {
+    public static void DescobreDiaDaSemana(int qntDias) {
         int num = qntDias % 7;
         switch (num) {
             case 1:

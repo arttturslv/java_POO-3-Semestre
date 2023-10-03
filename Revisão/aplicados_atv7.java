@@ -6,18 +6,19 @@ public class aplicados_atv7 {
 
         System.out.println("Numero a ser multiplicado por 11: ");
             num = sc.nextInt();
-        resultado(num);
+        calcula(num);
         sc.close();
     }
 
-    public static void resultado (int num) {
-        int digitoUm = num/10;
-        int digitoDois = num%10;
+    public static void calcula (int num) {
+        int digitoUm = num/10; //pega o primeiro digito
+        int digitoDois = num%10; //pega o ultimo digito
+
         int soma = digitoUm+digitoDois;
         
         if(soma>9) {
-            int somaDir = soma % 10;
-            digitoUm+=1;
+            int somaDir = soma % 10; //pega o digito da direita
+            digitoUm+=1; //acrescenta 1 no digito da esquerda
             System.out.println(digitoUm+""+somaDir+""+digitoDois);
         } else {
             System.out.println(digitoUm+""+soma+""+digitoDois);
