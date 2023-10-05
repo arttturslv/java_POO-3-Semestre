@@ -1,22 +1,36 @@
-import java.text.SimpleDateFormat;
+import java.util.Date;
 
 class Convite {
-    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
     private String emissor;
-    private String dataMarcada; 
+    private Date dataMarcada; 
+    private Date horaMarcada; 
 
-    public Convite(String dataMarcada, String socio) {
+    public Convite(Date dataMarcada, Date horaMarcada, String emissor) {
         this.dataMarcada = dataMarcada;
-        emissor = socio;
+        this.horaMarcada = horaMarcada;
+        this.emissor = emissor;
     }
 
-    public boolean existe(String dataAtual, String idSocio) {
-        if(dataMarcada.equals(dataAtual) && emissor.equals(idSocio)) {
+    /**
+     * Função que retorna o id do emissor do convite.
+     * @return idEmissor
+     */
+    public String getIdEmissor() {
+        return emissor;
+    }
+
+    /**
+     * Função booleana que verifica se o convite possui a mesma data que a passada via parametro.
+     * @param dataAtual -> data no formato dd/MM/yyyy
+     * @param horaAtual -> hora no formato HH:mm:ss
+     * @return true se a operação for bem-sucedida, false caso contrário
+     */
+    public boolean existe(Date dataAtual, Date horaAtual) {
+        if(dataMarcada.equals(dataAtual) && horaMarcada.compareTo(horaAtual) < 0) {
             return true;
         } 
-        System.out.println("Convite não existe.");
+        System.out.println("Não existe convites marcados para "+dataAtual+", as "+horaAtual);
         return false;
     }
-
 }
